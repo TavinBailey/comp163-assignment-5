@@ -26,3 +26,29 @@ print(current_number)
 
 # Print the total number of steps taken
 print("Steps:", step_count)
+
+# ==============================
+# Challenge 2: Prime Number Checker (FOR loop)
+# ==============================
+
+print("\n=== Challenge 2: Prime Number Checker ===")
+
+# Read number to check for primality
+num = int(input())
+
+# Print the range of divisors being tested
+print(f"Enter a number: Testing divisors from 2 to {num - 1}...")
+
+# Assume number is prime until proven otherwise
+is_prime = True
+
+# Loop through all possible divisors from 2 up to (num-1)
+for divisor in range(2, num):
+    if num % divisor == 0:  # if divisible evenly
+        print(f"{num}, is not prime (divisible by {divisor})")  # print result
+        is_prime = False  # mark as not prime
+        break  # exit loop since we found a divisor
+
+# If no divisors found, the number is prime
+if is_prime:
+    print(f"{num} is prime!")
