@@ -52,3 +52,30 @@ for divisor in range(2, num):
 # If no divisors found, the number is prime
 if is_prime:
     print(f"{num} is prime!")
+
+# ==============================
+# Challenge 3: Multiplication Table
+# ==============================
+
+print("\n=== Challenge 3: Multiplication Table ===")
+print("Multiplication Table:")
+
+# Print top-left corner spacing for the header row
+print("  ", end="")
+
+# Print header row numbers 1-10
+for header_numbers in range(1, 11):
+    print(f"{header_numbers:4}", end="")  # each header number takes 4 spaces for alignment
+print()  # move to next line after header
+
+# Outer loop: iterate through row numbers 1-10
+for row_numbers in range(1, 11):
+    # Print the row number at the start of the line
+    print(f"{row_numbers:2}", end="")
+
+    # Inner loop: iterate through column numbers 1-10
+    for col_numbers in range(1, 11):
+        product = row_numbers * col_numbers  # calculate product of row and column
+        print(f"{product:4}", end="")  # print product with 4-space alignment
+
+    print()  # move to next row after finishing all columns in the row
